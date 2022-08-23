@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    position: relative;
+    background-color: rgba(231, 148, 40, 0.5);
+}
+.row1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row2 {
+    position: absolute;
+    align-items: center;
+    top: 25px;
+    right: 250px;
+}
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./img/bg1.jpg);
+    z-index: -1;
+    clip-path: circle(60% at left 300px);
+}
+.container {
+    width: 70%;
+    display: grid;
+    margin: 0 auto;
+    margin-top: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(200px,0.5fr));
+    grid-gap: 20px;
+    box-sizing: border-box;
+    
+    
+}
+.card {
+    margin-bottom: 10px;
+    align-items: center;
+    background-color: rgb(231, 148, 40);
+    border-radius: 12px;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.header .search input{
+    font-size: 20px;
+background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(200px,0.5fr));
+        grid-gap: 20px;
+        box-sizing: border-box;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+}
+
+
+@media screen and (max-width: 1250px) {
+    .header {
+        width: 100%;
+        /* height: 500px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: rgba(231, 148, 40, 0.5);
+    }
+    .row1{
+        padding-right: 10px;
+    }
+    .row2 {
+        position: static;
+        align-items: center;
+        /* top: 25px;
+        right: 250px; */
+    }
+    .row2 {
+        margin-top: 35px;
+    }
+    .row2 img {
+        display: none;
+    }
+   
+    .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./img/bg1.jpg);
+        z-index: -1;
+        clip-path: none;
+    }
+   
+}
